@@ -320,7 +320,7 @@ public class PredicateUtils {
 	private static Predicate like(Root<?> root, CriteriaBuilder cb, String field, String value) {
 		Predicate predicate = null; 
 		if (value != null && !value.isEmpty()) {
-			predicate = cb.like(root.get(field), "%" + field + "%");
+			predicate = cb.like(root.get(field), "%" + value + "%");
 		}
 		return predicate;
 	}
